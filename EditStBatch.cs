@@ -59,6 +59,7 @@ namespace StudentTagsSprint1
         }
         #endregion
 
+        #region Gridfill
         private void GridFill()
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -87,7 +88,9 @@ namespace StudentTagsSprint1
 
             sqlCon.Close();
         }
+        #endregion
 
+        #region TextBoxGroupNoKeyPress
         private void textBoxGrpNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -95,7 +98,9 @@ namespace StudentTagsSprint1
                 e.Handled = true;
             }
         }
+        #endregion
 
+        #region SubmitButton
         private void buttonSaveUpdate_Click(object sender, EventArgs e)
         {
             if (comboProg.Text.Length == 0 || comboYear.Text.Length == 0 || comboSem.Text.Length == 0 || textBoxGrpNo.Text.Length == 0)
@@ -173,7 +178,9 @@ namespace StudentTagsSprint1
             }
 
         }
+        #endregion
 
+        #region ClearButton
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.textBoxGrpNo.Text = "";
@@ -183,7 +190,9 @@ namespace StudentTagsSprint1
             this.label7.Text = "";
             buttonSaveUpdate.Enabled = true;
         }
+        #endregion
 
+        #region GridViewDoubleClick
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             label7.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
@@ -194,7 +203,9 @@ namespace StudentTagsSprint1
             buttonSaveUpdate.Enabled = false;
 
         }
+        #endregion
 
+        #region SubGroupAddButton
         private void btnDlt_Click(object sender, EventArgs e)
         {
 
@@ -209,7 +220,9 @@ namespace StudentTagsSprint1
             editStSubBatch.BringToFront();
             editStSubBatch.Show();
         }
+        #endregion
 
+        #region DeleteButton
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (comboProg.Text.Length == 0 || comboSem.Text.Length == 0 || comboYear.Text.Length == 0 || textBoxGrpNo.Text.Length == 0)
@@ -277,8 +290,8 @@ namespace StudentTagsSprint1
                 buttonSaveUpdate.Enabled = true;
             }
         }
+        #endregion
 
 
-    
     }
 }
