@@ -17,6 +17,7 @@ namespace StudentTagsSprint1
 
         String id;
 
+
         public Tags()
         {
             InitializeComponent();
@@ -25,49 +26,49 @@ namespace StudentTagsSprint1
         #region Button Submit
         private void buttonSaveUpdate_Click(object sender, EventArgs e)
         {
-                if (textBoxTagName.Text.Length == 0)
+            if (textBoxTagName.Text.Length == 0)
+            {
+                MessageBox.Show("Fill The Field!");
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Fill The Field!");
+                    if (sqlCon.State == ConnectionState.Closed)
+                    {
+                        sqlCon.Open();
+                    }
+                    String Query = "Insert into tags (TagName) values (@name)";
+                    SqlCommand sqlCmd = new SqlCommand(Query, sqlCon);
+
+                    sqlCmd.Parameters.AddWithValue("@name", textBoxTagName.Text.Trim());
+
+                    int rows = sqlCmd.ExecuteNonQuery();
+
+                    if (rows >= 1)
+                    {
+                        MessageBox.Show("Successfully Added!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error!");
+                    }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    try
-                    {
-                        if (sqlCon.State == ConnectionState.Closed)
-                        {
-                            sqlCon.Open();
-                        }
-                        String Query = "Insert into tags (TagName) values (@name)";
-                        SqlCommand sqlCmd = new SqlCommand(Query, sqlCon);
-
-                        sqlCmd.Parameters.AddWithValue("@name", textBoxTagName.Text.Trim());
-
-                        int rows = sqlCmd.ExecuteNonQuery();
-
-                        if (rows >= 1)
-                        {
-                            MessageBox.Show("Successfully Added!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error!");
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Error!");
-                    }
-                    finally
-                    {
-                        sqlCon.Close();
-                    }
-
-                    GridFill();
-
-                    this.textBoxTagName.Text = "";
+                    MessageBox.Show(ex.Message, "Error!");
                 }
-            
+                finally
+                {
+                    sqlCon.Close();
+                }
+
+                GridFill();
+
+                this.textBoxTagName.Text = "";
+            }
+
         }
         #endregion
 
@@ -262,6 +263,8 @@ namespace StudentTagsSprint1
 
             }
         }
+
         #endregion
     }
+
 }
