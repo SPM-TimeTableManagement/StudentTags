@@ -22,6 +22,7 @@ namespace StudentTagsSprint1
             InitializeComponent();
         }
 
+        #region Button Submit
         private void buttonSaveUpdate_Click(object sender, EventArgs e)
         {
                 if (textBoxTagName.Text.Length == 0)
@@ -68,7 +69,9 @@ namespace StudentTagsSprint1
                 }
             
         }
+        #endregion
 
+        #region GridFill
         void GridFill()
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -95,12 +98,14 @@ namespace StudentTagsSprint1
             sqlCon.Close();
 
         }
+        #endregion
 
         private void Tags_Load(object sender, EventArgs e)
         {
             GridFill();
         }
 
+        #region textBox TagName KeyPress
         private void textBoxTagName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -108,7 +113,9 @@ namespace StudentTagsSprint1
                 e.Handled = true;
             }
         }
+        #endregion
 
+        #region textBox Search TextChanged
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -132,24 +139,28 @@ namespace StudentTagsSprint1
             }
 
             sqlCon.Close();
-
-
         }
+        #endregion
 
+        #region GridView Double Click
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             textBoxTagName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             buttonSaveUpdate.Enabled = false;
         }
+        #endregion
 
+        #region Button Clear
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.textBoxTagName.Text = "";
             this.textBoxSearch.Text = "";
             buttonSaveUpdate.Enabled = true;
         }
+        #endregion
 
+        #region Button Delete
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (textBoxTagName.Text.Length == 0)
@@ -198,7 +209,9 @@ namespace StudentTagsSprint1
             }
             this.textBoxTagName.Text = "";
         }
+        #endregion
 
+        #region Button Edit
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (textBoxTagName.Text.Length == 0)
@@ -249,5 +262,6 @@ namespace StudentTagsSprint1
 
             }
         }
+        #endregion
     }
 }
