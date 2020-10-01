@@ -32,6 +32,7 @@ namespace StudentTagsSprint1
             GridFill();
         }
 
+        #region Fill Programme Combobox
         private void fillCombo()
         {
             comboProg.Items.Clear();
@@ -56,6 +57,7 @@ namespace StudentTagsSprint1
 
             sqlCon.Close();
         }
+        #endregion
 
         private void GridFill()
         {
