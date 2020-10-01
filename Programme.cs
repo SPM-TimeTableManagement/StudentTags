@@ -21,6 +21,7 @@ namespace StudentTagsSprint1
             InitializeComponent();
         }
 
+        #region Button Submit and Edit
         private void buttonSaveUpdate_Click(object sender, EventArgs e)
         {
             if (buttonSaveUpdate.Text == "Enter")
@@ -119,7 +120,9 @@ namespace StudentTagsSprint1
                 }
             }
         }
+        #endregion
 
+        #region textBox ProgrammeName KeyPress
         private void textBoxProgName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -127,7 +130,9 @@ namespace StudentTagsSprint1
                 e.Handled = true;
             }
         }
+        #endregion
 
+        #region GridFill
         void GridFill()
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -154,19 +159,23 @@ namespace StudentTagsSprint1
             sqlCon.Close();
 
         }
+        #endregion
 
         private void Programme_Load(object sender, EventArgs e)
         {
             GridFill();
         }
 
+        #region GridView DoubleClick
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             textBoxProgName.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBoxProgCode.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             buttonSaveUpdate.Text = "Update";
         }
+        #endregion
 
+        #region Button Delete
         private void btnDlt_Click(object sender, EventArgs e)
         {
             if (textBoxProgName.Text.Length == 0 || textBoxProgCode.Text.Length == 0)
@@ -215,7 +224,9 @@ namespace StudentTagsSprint1
 
             }
         }
+        #endregion
 
+        #region Button Clear
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.textBoxProgName.Text = "";
@@ -223,7 +234,9 @@ namespace StudentTagsSprint1
             this.textBoxSearch.Text = "";
             buttonSaveUpdate.Text = "Enter";
         }
+        #endregion
 
+        #region TextBox Search TextChanged
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -251,5 +264,6 @@ namespace StudentTagsSprint1
             sqlCon.Close();
 
         }
+        #endregion
     }
 }
