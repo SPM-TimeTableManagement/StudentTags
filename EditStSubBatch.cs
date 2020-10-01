@@ -15,8 +15,6 @@ namespace StudentTagsSprint1
     {
         SqlConnection sqlCon = new SqlConnection(@"Data Source=LAPTOP-3T5FJ761;Initial Catalog=test1;Integrated Security=True");
 
-        
-
         public EditStSubBatch()
         {
             InitializeComponent();
@@ -29,6 +27,7 @@ namespace StudentTagsSprint1
             label1.Visible = false;
         }
 
+        #region GridFill
         private void GridFill()
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -56,7 +55,9 @@ namespace StudentTagsSprint1
 
             sqlCon.Close();
         }
+        #endregion
 
+        #region textBoxStudentCountKeyPress
         private void textBoxStuCount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -65,7 +66,9 @@ namespace StudentTagsSprint1
             }
 
         }
+        #endregion
 
+        #region textBoxSub StudentCount KeyPress
         private void textBoxSubStuCount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -73,7 +76,9 @@ namespace StudentTagsSprint1
                 e.Handled = true;
             }
         }
+        #endregion
 
+        #region Submit and Edit button
         private void buttonSaveUpdate_Click(object sender, EventArgs e)
         {
             if (buttonSaveUpdate.Text == "Submit")
@@ -233,7 +238,9 @@ namespace StudentTagsSprint1
 
             GridFill();
         }
+        #endregion
 
+        #region GridView Double Click
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             buttonSaveUpdate.Text = "Update";
@@ -242,7 +249,9 @@ namespace StudentTagsSprint1
             textBoxStuCount.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBoxSubStuCount.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
         }
+        #endregion
 
+        #region Delete Button
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (textBoxStuCount.Text.Length == 0 || textBoxSubStuCount.Text.Length == 0 || labelGroupId.Text.Length == 0)
@@ -303,6 +312,7 @@ namespace StudentTagsSprint1
                 label1.Visible = false;
             }
         }
+        #endregion
 
     }
 }
