@@ -20,6 +20,7 @@ namespace StudentTagsSprint1
             InitializeComponent();
         }
 
+        #region Fill ComboBox
         private void fillCombo()
         {
 
@@ -43,7 +44,9 @@ namespace StudentTagsSprint1
 
             sqlCon.Close();
         }
+        #endregion
 
+        #region textBox Search Groups TextChanged
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             
@@ -79,6 +82,7 @@ namespace StudentTagsSprint1
                 sqlCon.Close();
             
         }
+        #endregion
 
         private void StudentList_Load(object sender, EventArgs e)
         {
@@ -86,6 +90,7 @@ namespace StudentTagsSprint1
             fillCombo();
         }
 
+        #region GridFill both tables
         private void GridFill()
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -128,7 +133,9 @@ namespace StudentTagsSprint1
 
             sqlCon.Close();
         }
+        #endregion
 
+        #region Search Button 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -167,7 +174,9 @@ namespace StudentTagsSprint1
                 sqlCon.Close();
             }
         }
+        #endregion
 
+        #region textBox Search KeyPress
         private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -175,12 +184,16 @@ namespace StudentTagsSprint1
                 e.Handled = true;
             }
         }
+        #endregion
 
+        #region GridView Double Click
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             textBoxSearch1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
         }
+        #endregion
 
+        #region textBox Search SubGroup TextChanged
         private void textBoxSearch1_TextChanged(object sender, EventArgs e)
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -212,7 +225,9 @@ namespace StudentTagsSprint1
 
             sqlCon.Close();
         }
+        #endregion
 
+        #region Button Clear
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.comboBox1.SelectedIndex = -1;
@@ -224,5 +239,6 @@ namespace StudentTagsSprint1
 
             GridFill();
         }
+        #endregion
     }
 }
