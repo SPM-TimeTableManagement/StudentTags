@@ -64,6 +64,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotAvailable.Designer.cs">
+      <DependentUpon>NotAvailable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Programme.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotAvailable.resx">
+      <DependentUpon>NotAvailable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Programme.resx">
       <DependentUpon>Programme.cs</DependentUpon>
