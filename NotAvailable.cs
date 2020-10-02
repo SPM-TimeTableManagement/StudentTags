@@ -259,6 +259,73 @@ namespace StudentTagsSprint1
             button1.Enabled = true;
         }
 
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (comboCategory.Text.Length == 0 || textBoxCode.Text.Length == 0)
+            {
+                MessageBox.Show("Nothing to delete!!");
+            }
+            else if (MessageBox.Show("Are you sure?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    if (sqlCon.State == ConnectionState.Closed)
+                    {
+                        sqlCon.Open();
+                    }
+                    String Query = "Delete from NotAvailable where Code = @code";
 
+                    SqlCommand sqlCmd = new SqlCommand(Query, sqlCon);
+
+                    sqlCmd.Parameters.AddWithValue("@code", textBoxCode.Text);
+
+                    int rows = sqlCmd.ExecuteNonQuery();
+
+                    if (rows >= 1)
+                    {
+                        MessageBox.Show("Successfully Deleted!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error!");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error!");
+                }
+                finally
+                {
+                    sqlCon.Close();
+                }
+
+                GridFill();
+                setTimeFormat();
+
+                comboCategory.SelectedIndex = -1;
+                comboCategorySelection.SelectedIndex = -1;
+                textBoxCode.Text = "";
+
+                buttonEnter.Enabled = true;
+                button1.Enabled = true;
+                labelCat.Text = "";
+
+
+            }
+            else
+            {
+                GridFill();
+                setTimeFormat();
+
+                comboCategory.SelectedIndex = -1;
+                comboCategorySelection.SelectedIndex = -1;
+                textBoxCode.Text = "";
+
+                buttonEnter.Enabled = true;
+                button1.Enabled = true;
+                labelCat.Text = "";
+            }
+        }
     }
 }
