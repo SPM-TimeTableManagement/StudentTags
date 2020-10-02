@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsecutiveSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsecutiveSessions.Designer.cs">
+      <DependentUpon>ConsecutiveSessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditStBatch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>test1DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConsecutiveSessions.resx">
+      <DependentUpon>ConsecutiveSessions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditStBatch.resx">
       <DependentUpon>EditStBatch.cs</DependentUpon>
     </EmbeddedResource>
