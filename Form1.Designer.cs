@@ -34,6 +34,7 @@
             this.btnBuild = new System.Windows.Forms.Button();
             this.btnWorking = new System.Windows.Forms.Button();
             this.panelSubStuMenu = new System.Windows.Forms.Panel();
+            this.btnSubGroup = new System.Windows.Forms.Button();
             this.btnStuBatch = new System.Windows.Forms.Button();
             this.btnStuManage = new System.Windows.Forms.Button();
             this.btnProg = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.btnSub = new System.Windows.Forms.Button();
             this.btnLec = new System.Windows.Forms.Button();
             this.panelForm1 = new System.Windows.Forms.Panel();
-            this.btnSubGroup = new System.Windows.Forms.Button();
+            this.buttonNotAvailable = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSubStuMenu.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelMenu.Controls.Add(this.buttonNotAvailable);
             this.panelMenu.Controls.Add(this.btnTag);
             this.panelMenu.Controls.Add(this.btnRoom);
             this.panelMenu.Controls.Add(this.btnBuild);
@@ -120,6 +122,17 @@
             this.panelSubStuMenu.Name = "panelSubStuMenu";
             this.panelSubStuMenu.Size = new System.Drawing.Size(200, 274);
             this.panelSubStuMenu.TabIndex = 1;
+            // 
+            // btnSubGroup
+            // 
+            this.btnSubGroup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubGroup.Location = new System.Drawing.Point(0, 198);
+            this.btnSubGroup.Name = "btnSubGroup";
+            this.btnSubGroup.Size = new System.Drawing.Size(200, 68);
+            this.btnSubGroup.TabIndex = 7;
+            this.btnSubGroup.Text = "Edit Sub Groups";
+            this.btnSubGroup.UseVisualStyleBackColor = true;
+            this.btnSubGroup.Click += new System.EventHandler(this.btnSubGroup_Click);
             // 
             // btnStuBatch
             // 
@@ -197,16 +210,16 @@
             this.panelForm1.Size = new System.Drawing.Size(1080, 665);
             this.panelForm1.TabIndex = 1;
             // 
-            // btnSubGroup
+            // buttonNotAvailable
             // 
-            this.btnSubGroup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSubGroup.Location = new System.Drawing.Point(0, 198);
-            this.btnSubGroup.Name = "btnSubGroup";
-            this.btnSubGroup.Size = new System.Drawing.Size(200, 68);
-            this.btnSubGroup.TabIndex = 7;
-            this.btnSubGroup.Text = "Edit Sub Groups";
-            this.btnSubGroup.UseVisualStyleBackColor = true;
-            this.btnSubGroup.Click += new System.EventHandler(this.btnSubGroup_Click);
+            this.buttonNotAvailable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonNotAvailable.Location = new System.Drawing.Point(0, 739);
+            this.buttonNotAvailable.Name = "buttonNotAvailable";
+            this.buttonNotAvailable.Size = new System.Drawing.Size(200, 70);
+            this.buttonNotAvailable.TabIndex = 8;
+            this.buttonNotAvailable.Text = "Manage Not Available";
+            this.buttonNotAvailable.UseVisualStyleBackColor = true;
+            this.buttonNotAvailable.Click += new System.EventHandler(this.buttonNotAvailable_Click);
             // 
             // Form1
             // 
@@ -239,6 +252,7 @@
         private System.Windows.Forms.Button btnTag;
         private System.Windows.Forms.Panel panelForm1;
         private System.Windows.Forms.Button btnSubGroup;
+        private System.Windows.Forms.Button buttonNotAvailable;
     }
 }
 

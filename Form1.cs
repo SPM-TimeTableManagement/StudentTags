@@ -104,6 +104,11 @@ namespace StudentTagsSprint1
             openChildForm(new Tags());
         }
 
+        private void buttonNotAvailable_Click(object sender, EventArgs e)
+        {
+            openChildForm(new NotAvailable());
+        }
+
         private Form activeForm = null;
 
         private void openChildForm(Form childForm)
