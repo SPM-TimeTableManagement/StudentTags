@@ -39,6 +39,7 @@
             this.btnStu = new System.Windows.Forms.Button();
             this.panelForm1 = new System.Windows.Forms.Panel();
             this.buttonConsecutive = new System.Windows.Forms.Button();
+            this.buttonOverlap = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSubStuMenu.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelMenu.Controls.Add(this.buttonOverlap);
             this.panelMenu.Controls.Add(this.buttonConsecutive);
             this.panelMenu.Controls.Add(this.buttonNotAvailable);
             this.panelMenu.Controls.Add(this.btnTag);
@@ -169,6 +171,17 @@
             this.buttonConsecutive.UseVisualStyleBackColor = true;
             this.buttonConsecutive.Click += new System.EventHandler(this.buttonConsecutive_Click);
             // 
+            // buttonOverlap
+            // 
+            this.buttonOverlap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonOverlap.Location = new System.Drawing.Point(0, 549);
+            this.buttonOverlap.Name = "buttonOverlap";
+            this.buttonOverlap.Size = new System.Drawing.Size(221, 70);
+            this.buttonOverlap.TabIndex = 10;
+            this.buttonOverlap.Text = "Manage Overlapping Sessions";
+            this.buttonOverlap.UseVisualStyleBackColor = true;
+            this.buttonOverlap.Click += new System.EventHandler(this.buttonOverlap_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,6 +210,7 @@
         private System.Windows.Forms.Button btnSubGroup;
         private System.Windows.Forms.Button buttonNotAvailable;
         private System.Windows.Forms.Button buttonConsecutive;
+        private System.Windows.Forms.Button buttonOverlap;
     }
 }
 

@@ -106,5 +106,10 @@ namespace StudentTagsSprint1
         {
             openChildForm(new ConsecutiveSessions());
         }
+
+        private void buttonOverlap_Click(object sender, EventArgs e)
+        {
+            openChildForm(new NotOverlapping());
+        }
     }
 }
