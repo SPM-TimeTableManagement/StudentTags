@@ -40,6 +40,7 @@
             this.panelForm1 = new System.Windows.Forms.Panel();
             this.buttonConsecutive = new System.Windows.Forms.Button();
             this.buttonOverlap = new System.Windows.Forms.Button();
+            this.buttonParallel = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSubStuMenu.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelMenu.Controls.Add(this.buttonParallel);
             this.panelMenu.Controls.Add(this.buttonOverlap);
             this.panelMenu.Controls.Add(this.buttonConsecutive);
             this.panelMenu.Controls.Add(this.buttonNotAvailable);
@@ -182,6 +184,17 @@
             this.buttonOverlap.UseVisualStyleBackColor = true;
             this.buttonOverlap.Click += new System.EventHandler(this.buttonOverlap_Click);
             // 
+            // buttonParallel
+            // 
+            this.buttonParallel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonParallel.Location = new System.Drawing.Point(0, 619);
+            this.buttonParallel.Name = "buttonParallel";
+            this.buttonParallel.Size = new System.Drawing.Size(221, 70);
+            this.buttonParallel.TabIndex = 11;
+            this.buttonParallel.Text = "Manage Parallel Sessions";
+            this.buttonParallel.UseVisualStyleBackColor = true;
+            this.buttonParallel.Click += new System.EventHandler(this.buttonParallel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,6 +224,7 @@
         private System.Windows.Forms.Button buttonNotAvailable;
         private System.Windows.Forms.Button buttonConsecutive;
         private System.Windows.Forms.Button buttonOverlap;
+        private System.Windows.Forms.Button buttonParallel;
     }
 }
 

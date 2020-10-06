@@ -82,6 +82,12 @@
     <Compile Include="NotOverlapping.Designer.cs">
       <DependentUpon>NotOverlapping.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParallelSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParallelSession.Designer.cs">
+      <DependentUpon>ParallelSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Programme.cs">
       <SubType>Form</SubType>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotOverlapping.resx">
       <DependentUpon>NotOverlapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParallelSession.resx">
+      <DependentUpon>ParallelSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Programme.resx">
       <DependentUpon>Programme.cs</DependentUpon>

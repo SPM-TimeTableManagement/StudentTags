@@ -111,5 +111,11 @@ namespace StudentTagsSprint1
         {
             openChildForm(new NotOverlapping());
         }
+
+        private void buttonParallel_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ParallelSession());
+
+        }
     }
 }
