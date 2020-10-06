@@ -31,9 +31,6 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonNotAvailable = new System.Windows.Forms.Button();
             this.btnTag = new System.Windows.Forms.Button();
-            this.btnRoom = new System.Windows.Forms.Button();
-            this.btnBuild = new System.Windows.Forms.Button();
-            this.btnWorking = new System.Windows.Forms.Button();
             this.panelSubStuMenu = new System.Windows.Forms.Panel();
             this.btnSubGroup = new System.Windows.Forms.Button();
             this.btnStuBatch = new System.Windows.Forms.Button();
@@ -41,6 +38,7 @@
             this.btnProg = new System.Windows.Forms.Button();
             this.btnStu = new System.Windows.Forms.Button();
             this.panelForm1 = new System.Windows.Forms.Panel();
+            this.buttonConsecutive = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSubStuMenu.SuspendLayout();
             this.SuspendLayout();
@@ -49,11 +47,9 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelMenu.Controls.Add(this.buttonConsecutive);
             this.panelMenu.Controls.Add(this.buttonNotAvailable);
             this.panelMenu.Controls.Add(this.btnTag);
-            this.panelMenu.Controls.Add(this.btnRoom);
-            this.panelMenu.Controls.Add(this.btnBuild);
-            this.panelMenu.Controls.Add(this.btnWorking);
             this.panelMenu.Controls.Add(this.panelSubStuMenu);
             this.panelMenu.Controls.Add(this.btnStu);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -65,7 +61,7 @@
             // buttonNotAvailable
             // 
             this.buttonNotAvailable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNotAvailable.Location = new System.Drawing.Point(0, 609);
+            this.buttonNotAvailable.Location = new System.Drawing.Point(0, 409);
             this.buttonNotAvailable.Name = "buttonNotAvailable";
             this.buttonNotAvailable.Size = new System.Drawing.Size(221, 70);
             this.buttonNotAvailable.TabIndex = 8;
@@ -76,46 +72,13 @@
             // btnTag
             // 
             this.btnTag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTag.Location = new System.Drawing.Point(0, 539);
+            this.btnTag.Location = new System.Drawing.Point(0, 339);
             this.btnTag.Name = "btnTag";
             this.btnTag.Size = new System.Drawing.Size(221, 70);
             this.btnTag.TabIndex = 7;
             this.btnTag.Text = "Manage Tags";
             this.btnTag.UseVisualStyleBackColor = true;
             this.btnTag.Click += new System.EventHandler(this.btnTag_Click);
-            // 
-            // btnRoom
-            // 
-            this.btnRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoom.Location = new System.Drawing.Point(0, 469);
-            this.btnRoom.Name = "btnRoom";
-            this.btnRoom.Size = new System.Drawing.Size(221, 70);
-            this.btnRoom.TabIndex = 6;
-            this.btnRoom.Text = "Add Room";
-            this.btnRoom.UseVisualStyleBackColor = true;
-            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
-            // 
-            // btnBuild
-            // 
-            this.btnBuild.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBuild.Location = new System.Drawing.Point(0, 404);
-            this.btnBuild.Name = "btnBuild";
-            this.btnBuild.Size = new System.Drawing.Size(221, 65);
-            this.btnBuild.TabIndex = 5;
-            this.btnBuild.Text = "Add Building";
-            this.btnBuild.UseVisualStyleBackColor = true;
-            this.btnBuild.Click += new System.EventHandler(this.btnBuild_Click);
-            // 
-            // btnWorking
-            // 
-            this.btnWorking.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWorking.Location = new System.Drawing.Point(0, 339);
-            this.btnWorking.Name = "btnWorking";
-            this.btnWorking.Size = new System.Drawing.Size(221, 65);
-            this.btnWorking.TabIndex = 4;
-            this.btnWorking.Text = "Working D/H";
-            this.btnWorking.UseVisualStyleBackColor = true;
-            this.btnWorking.Click += new System.EventHandler(this.btnWorking_Click);
             // 
             // panelSubStuMenu
             // 
@@ -195,6 +158,17 @@
             this.panelForm1.Size = new System.Drawing.Size(1080, 665);
             this.panelForm1.TabIndex = 1;
             // 
+            // buttonConsecutive
+            // 
+            this.buttonConsecutive.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonConsecutive.Location = new System.Drawing.Point(0, 479);
+            this.buttonConsecutive.Name = "buttonConsecutive";
+            this.buttonConsecutive.Size = new System.Drawing.Size(221, 70);
+            this.buttonConsecutive.TabIndex = 9;
+            this.buttonConsecutive.Text = "Manage Consecutive Sessions";
+            this.buttonConsecutive.UseVisualStyleBackColor = true;
+            this.buttonConsecutive.Click += new System.EventHandler(this.buttonConsecutive_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,9 +188,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnStu;
-        private System.Windows.Forms.Button btnRoom;
-        private System.Windows.Forms.Button btnBuild;
-        private System.Windows.Forms.Button btnWorking;
         private System.Windows.Forms.Panel panelSubStuMenu;
         private System.Windows.Forms.Button btnStuBatch;
         private System.Windows.Forms.Button btnStuManage;
@@ -225,6 +196,7 @@
         private System.Windows.Forms.Panel panelForm1;
         private System.Windows.Forms.Button btnSubGroup;
         private System.Windows.Forms.Button buttonNotAvailable;
+        private System.Windows.Forms.Button buttonConsecutive;
     }
 }
 

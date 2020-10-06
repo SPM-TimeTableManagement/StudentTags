@@ -33,6 +33,8 @@ namespace StudentTagsSprint1
             fillCombo();
             textBoxCode.Visible = true;
             buttonDlt.Enabled = false;
+            textBoxCode.Enabled = true;
+            buttonSave.Enabled = true;
         }
 
         void GridFill()
@@ -193,9 +195,9 @@ namespace StudentTagsSprint1
 
                 comboBoxTag.SelectedIndex = -1;
                 comboBoxSession.SelectedIndex = -1;
+                textBoxCode.Visible = false;
+                textBoxCode.Enabled = true;
             }
-
-            textBoxCode.Visible = false;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -256,6 +258,7 @@ namespace StudentTagsSprint1
                 labelSub.Text = "";
                 textBoxCode.Text = "";
                 textBoxCode.Visible = true;
+                textBoxCode.Enabled = true;
             }
         }
 
@@ -271,6 +274,8 @@ namespace StudentTagsSprint1
             textBoxCode.Text = "";
             textBoxCode.Visible = true;
             buttonDlt.Enabled = false;
+            textBoxCode.Enabled = true;
+            buttonSave.Enabled = true;
         }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -278,6 +283,8 @@ namespace StudentTagsSprint1
             textBoxCode.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             labelSub.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             buttonDlt.Enabled = true;
+            textBoxCode.Enabled = false;
+            buttonSave.Enabled = false;
         }
 
         private void buttonDlt_Click(object sender, EventArgs e)
@@ -333,6 +340,8 @@ namespace StudentTagsSprint1
             textBoxCode.Text = "";
             textBoxCode.Visible = true;
             buttonDlt.Enabled = false;
+            textBoxCode.Enabled = true;
+            buttonSave.Enabled = true;
         }
 
         private void textBoxCode_KeyPress(object sender, KeyPressEventArgs e)

@@ -74,20 +74,6 @@ namespace StudentTagsSprint1
             hideSubMenu();
             openChildForm(new EditStSubBatch());
         }
-        private void btnWorking_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuild_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRoom_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnTag_Click(object sender, EventArgs e)
         {
@@ -116,6 +102,9 @@ namespace StudentTagsSprint1
             childForm.Show();
         }
 
-        
+        private void buttonConsecutive_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ConsecutiveSessions());
+        }
     }
 }
