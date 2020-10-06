@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonNotAvailable = new System.Windows.Forms.Button();
             this.btnTag = new System.Windows.Forms.Button();
             this.btnRoom = new System.Windows.Forms.Button();
             this.btnBuild = new System.Windows.Forms.Button();
@@ -39,10 +40,7 @@
             this.btnStuManage = new System.Windows.Forms.Button();
             this.btnProg = new System.Windows.Forms.Button();
             this.btnStu = new System.Windows.Forms.Button();
-            this.btnSub = new System.Windows.Forms.Button();
-            this.btnLec = new System.Windows.Forms.Button();
             this.panelForm1 = new System.Windows.Forms.Panel();
-            this.buttonNotAvailable = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSubStuMenu.SuspendLayout();
             this.SuspendLayout();
@@ -58,20 +56,29 @@
             this.panelMenu.Controls.Add(this.btnWorking);
             this.panelMenu.Controls.Add(this.panelSubStuMenu);
             this.panelMenu.Controls.Add(this.btnStu);
-            this.panelMenu.Controls.Add(this.btnSub);
-            this.panelMenu.Controls.Add(this.btnLec);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(221, 689);
             this.panelMenu.TabIndex = 0;
             // 
+            // buttonNotAvailable
+            // 
+            this.buttonNotAvailable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonNotAvailable.Location = new System.Drawing.Point(0, 609);
+            this.buttonNotAvailable.Name = "buttonNotAvailable";
+            this.buttonNotAvailable.Size = new System.Drawing.Size(221, 70);
+            this.buttonNotAvailable.TabIndex = 8;
+            this.buttonNotAvailable.Text = "Manage Not Available";
+            this.buttonNotAvailable.UseVisualStyleBackColor = true;
+            this.buttonNotAvailable.Click += new System.EventHandler(this.buttonNotAvailable_Click);
+            // 
             // btnTag
             // 
             this.btnTag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTag.Location = new System.Drawing.Point(0, 669);
+            this.btnTag.Location = new System.Drawing.Point(0, 539);
             this.btnTag.Name = "btnTag";
-            this.btnTag.Size = new System.Drawing.Size(200, 70);
+            this.btnTag.Size = new System.Drawing.Size(221, 70);
             this.btnTag.TabIndex = 7;
             this.btnTag.Text = "Manage Tags";
             this.btnTag.UseVisualStyleBackColor = true;
@@ -80,9 +87,9 @@
             // btnRoom
             // 
             this.btnRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoom.Location = new System.Drawing.Point(0, 599);
+            this.btnRoom.Location = new System.Drawing.Point(0, 469);
             this.btnRoom.Name = "btnRoom";
-            this.btnRoom.Size = new System.Drawing.Size(200, 70);
+            this.btnRoom.Size = new System.Drawing.Size(221, 70);
             this.btnRoom.TabIndex = 6;
             this.btnRoom.Text = "Add Room";
             this.btnRoom.UseVisualStyleBackColor = true;
@@ -91,9 +98,9 @@
             // btnBuild
             // 
             this.btnBuild.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBuild.Location = new System.Drawing.Point(0, 534);
+            this.btnBuild.Location = new System.Drawing.Point(0, 404);
             this.btnBuild.Name = "btnBuild";
-            this.btnBuild.Size = new System.Drawing.Size(200, 65);
+            this.btnBuild.Size = new System.Drawing.Size(221, 65);
             this.btnBuild.TabIndex = 5;
             this.btnBuild.Text = "Add Building";
             this.btnBuild.UseVisualStyleBackColor = true;
@@ -102,9 +109,9 @@
             // btnWorking
             // 
             this.btnWorking.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWorking.Location = new System.Drawing.Point(0, 469);
+            this.btnWorking.Location = new System.Drawing.Point(0, 339);
             this.btnWorking.Name = "btnWorking";
-            this.btnWorking.Size = new System.Drawing.Size(200, 65);
+            this.btnWorking.Size = new System.Drawing.Size(221, 65);
             this.btnWorking.TabIndex = 4;
             this.btnWorking.Text = "Working D/H";
             this.btnWorking.UseVisualStyleBackColor = true;
@@ -118,9 +125,9 @@
             this.panelSubStuMenu.Controls.Add(this.btnStuManage);
             this.panelSubStuMenu.Controls.Add(this.btnProg);
             this.panelSubStuMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubStuMenu.Location = new System.Drawing.Point(0, 195);
+            this.panelSubStuMenu.Location = new System.Drawing.Point(0, 65);
             this.panelSubStuMenu.Name = "panelSubStuMenu";
-            this.panelSubStuMenu.Size = new System.Drawing.Size(200, 274);
+            this.panelSubStuMenu.Size = new System.Drawing.Size(221, 274);
             this.panelSubStuMenu.TabIndex = 1;
             // 
             // btnSubGroup
@@ -128,7 +135,7 @@
             this.btnSubGroup.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSubGroup.Location = new System.Drawing.Point(0, 198);
             this.btnSubGroup.Name = "btnSubGroup";
-            this.btnSubGroup.Size = new System.Drawing.Size(200, 68);
+            this.btnSubGroup.Size = new System.Drawing.Size(221, 68);
             this.btnSubGroup.TabIndex = 7;
             this.btnSubGroup.Text = "Edit Sub Groups";
             this.btnSubGroup.UseVisualStyleBackColor = true;
@@ -139,7 +146,7 @@
             this.btnStuBatch.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStuBatch.Location = new System.Drawing.Point(0, 130);
             this.btnStuBatch.Name = "btnStuBatch";
-            this.btnStuBatch.Size = new System.Drawing.Size(200, 68);
+            this.btnStuBatch.Size = new System.Drawing.Size(221, 68);
             this.btnStuBatch.TabIndex = 6;
             this.btnStuBatch.Text = "Student List";
             this.btnStuBatch.UseVisualStyleBackColor = true;
@@ -150,7 +157,7 @@
             this.btnStuManage.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStuManage.Location = new System.Drawing.Point(0, 65);
             this.btnStuManage.Name = "btnStuManage";
-            this.btnStuManage.Size = new System.Drawing.Size(200, 65);
+            this.btnStuManage.Size = new System.Drawing.Size(221, 65);
             this.btnStuManage.TabIndex = 5;
             this.btnStuManage.Text = "Manage Student Batch";
             this.btnStuManage.UseVisualStyleBackColor = true;
@@ -161,7 +168,7 @@
             this.btnProg.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProg.Location = new System.Drawing.Point(0, 0);
             this.btnProg.Name = "btnProg";
-            this.btnProg.Size = new System.Drawing.Size(200, 65);
+            this.btnProg.Size = new System.Drawing.Size(221, 65);
             this.btnProg.TabIndex = 4;
             this.btnProg.Text = "Programme Manage";
             this.btnProg.UseVisualStyleBackColor = true;
@@ -170,35 +177,13 @@
             // btnStu
             // 
             this.btnStu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStu.Location = new System.Drawing.Point(0, 130);
+            this.btnStu.Location = new System.Drawing.Point(0, 0);
             this.btnStu.Name = "btnStu";
-            this.btnStu.Size = new System.Drawing.Size(200, 65);
+            this.btnStu.Size = new System.Drawing.Size(221, 65);
             this.btnStu.TabIndex = 3;
             this.btnStu.Text = "Student Batch and Programme";
             this.btnStu.UseVisualStyleBackColor = true;
             this.btnStu.Click += new System.EventHandler(this.btnStu_Click);
-            // 
-            // btnSub
-            // 
-            this.btnSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSub.Location = new System.Drawing.Point(0, 65);
-            this.btnSub.Name = "btnSub";
-            this.btnSub.Size = new System.Drawing.Size(200, 65);
-            this.btnSub.TabIndex = 2;
-            this.btnSub.Text = "Subject";
-            this.btnSub.UseVisualStyleBackColor = true;
-            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
-            // 
-            // btnLec
-            // 
-            this.btnLec.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLec.Location = new System.Drawing.Point(0, 0);
-            this.btnLec.Name = "btnLec";
-            this.btnLec.Size = new System.Drawing.Size(200, 65);
-            this.btnLec.TabIndex = 1;
-            this.btnLec.Text = "Lecturer(s)";
-            this.btnLec.UseVisualStyleBackColor = true;
-            this.btnLec.Click += new System.EventHandler(this.btnLec_Click);
             // 
             // panelForm1
             // 
@@ -209,17 +194,6 @@
             this.panelForm1.Name = "panelForm1";
             this.panelForm1.Size = new System.Drawing.Size(1080, 665);
             this.panelForm1.TabIndex = 1;
-            // 
-            // buttonNotAvailable
-            // 
-            this.buttonNotAvailable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNotAvailable.Location = new System.Drawing.Point(0, 739);
-            this.buttonNotAvailable.Name = "buttonNotAvailable";
-            this.buttonNotAvailable.Size = new System.Drawing.Size(200, 70);
-            this.buttonNotAvailable.TabIndex = 8;
-            this.buttonNotAvailable.Text = "Manage Not Available";
-            this.buttonNotAvailable.UseVisualStyleBackColor = true;
-            this.buttonNotAvailable.Click += new System.EventHandler(this.buttonNotAvailable_Click);
             // 
             // Form1
             // 
@@ -240,8 +214,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnStu;
-        private System.Windows.Forms.Button btnSub;
-        private System.Windows.Forms.Button btnLec;
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Button btnBuild;
         private System.Windows.Forms.Button btnWorking;

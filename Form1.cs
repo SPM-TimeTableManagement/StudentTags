@@ -45,16 +45,6 @@ namespace StudentTagsSprint1
             }
         }
 
-        private void btnLec_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSub_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnStu_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubStuMenu);
